@@ -1,0 +1,5 @@
+INSERT INTO users(id, name, index, address, email, password) VALUES(1, 'Den', '212008', 'Mogilev, Lenin str. 4-50', 'den_mogilev@yopmail.com', '$2a$10$fAhhMrd4fKSawqNjJGse5ej/.zwAIFnsDv4JVLrchTWtBmPFliuJG'), (2, 'Peter', '750406', 'Singapore, Sembawang Drive 406-5', 'peter_mogilev@yopmail.com', '$2a$10$Jz/fkQ8zhUxIa0ANiDQJzuAwijen4gUPWN72Bv0QjWgP.c8B9c2Ue'), (3, 'Asya', '212030', 'Mogilev, Lenin str. 4-74', 'asya_mogilev@yopmail.com','$2a$10$9IDpH95MdvX0oxFWM92w1.qRpzoaNNunEqq5jD2ovXcps9IPCYA1G'), (4, 'Jimmy', '745555', 'Delhi, Bugis str. 17-98', 'jimmy_mogilev@yopmail.com', '$2a$10$BtSb1vIX7synMgLIKximAeNZlpTAae4kZlZMR9xx7wxXZK2s0B4dC'), (5, 'Maricel', '745406', 'Bacalod, Flower str. 27-16', 'maricel_mogilev@yopmail.com', '$2a$10$xU0DpNS3QYJR1GFEoKu2p.VCAGcpt70KL239ZXz90ICe1nOpiBofa');
+SELECT setval('user_id_seq', (SELECT MAX(id) from users));
+
+INSERT INTO post_office(id, name, index) VALUES(1, 'Mogilev Central Post Office', '212008'), (2, 'Minsk Central Post Office', '222060'), (3, 'Singapore Central Post Office', '750406');
+SELECT setval('post_office_id_seq', (SELECT MAX(id) from post_office));
